@@ -1,0 +1,270 @@
+{% extends 'immob/layouts/base.html' %}{% load static %} 
+
+{% block content %}
+    
+
+    <main class="background-image">
+
+      <center>
+         <p class='h4 text-warning'>AFRIQUE IMMOBILIER</p>
+         <strong class="h4">Construire votre maison</strong>
+      </center>
+      <div class="container dim_bas">
+          <div class="bg-warning services">
+             <center><p>Terrain</p></center>
+             <p><center><a href="">Rechercher</a></center></p>
+          </div>
+          <div class="bg-warning services">
+              <center><p>Maison</p></center>
+              <p><center><a href="">Rechercher</a></center></p>
+          </div>
+          <div class="bg-warning services">
+              <center><p>Modele de maison</p></center>
+              <p><center><a href="">Rechercher</a></center></p>
+          </div>
+          <div class="bg-warning services"> 
+              <center>
+                  <p>Conseiller immobilier</p>
+                  
+              </center>
+              <p></p><center><a href="">Rechercher</a></center></p>
+          </div>
+      </div>
+  </main>
+
+  <div style='height: 50px;'>
+
+  </div>
+
+  <div class="container">
+    {% block search %}
+    <p class='h4 bg-light' style='padding: 10px;'>Rechercher un bien à louer</p>
+    <form class="form">
+      <div class="row">
+        <div class=" col-sm-3 form-group">
+          <input class="form-control form-control-sm" name='localite' type="text" placeholder="Localité" aria-label=".form-control-lg example"/>
+        </div>
+
+        <div class="col-sm-3 form-group">
+          <input class="form-control form-control-sm" name='nbr' type="number" placeholder="Nombre de pièces" aria-label=".form-control-lg example"/>
+        </div>
+
+        <div class=" col-sm-3 form-group">
+          <input class="form-control form-control-sm" type="number" name='prix_min' placeholder="Prix min" aria-label=".form-control-lg example"/>
+        </div>
+
+        <div class="col-sm-3 form-group">
+          <input class="form-control form-control-sm" type="number" name='prix_max' placeholder="Prix max" aria-label=".form-control-lg example"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" col-sm-3 form-group">
+          <input class="form-control form-control-sm" name='superficie' type="text" placeholder="Surface en m²" aria-label=".form-control-lg example"/>
+        </div>
+
+        <div class="col-sm-3 form-group">
+          <select class="form-select form-select-sm form-control-sm" aria-label=".form-select-sm example">
+            <option selected>Selectionner</option>
+            <option value="1">Appartement</option>
+            <option value="2">Terrain</option>
+            <option value="3">Villa</option>
+            <option value="3">Immeuble</option>
+            <option value="3">Tout selectionné</option>
+          </select>
+        </div>
+
+        <div class=" col-sm-3 form-group">
+          <input class="form-control form-control-sm" type="number" name='prix_min' placeholder="Prix min" aria-label=".form-control-lg example"/>
+        </div>
+
+        <div class="col-sm-3 form-group">
+          <input class="form-control form-control-sm" type="number" name='prix_max' placeholder="Prix max" aria-label=".form-control-lg example"/>
+        </div>
+      </div>
+      
+      
+      <button class="btn btn-warning btn-sm" type="submit" style='float: right;'>Chercher</button>
+    </form>
+
+    {% endblock search %}
+  </div>
+
+    <div class='container mt-5'>
+      <div class='offset bg-warning bg-gradient' >
+        <center>
+            <button class='btn btn-orange' id='btn1'>Mes bésoins</button>
+            <button class='btn btn-orange' id='btn2'>Besoins des autres</button>
+            <button class='btn btn-orange' id='btn3'>Mes opportunités</button>
+            <button class='btn btn-orange' id='btn4'>opportunités des autres</button>
+        </center>
+      </div>
+
+      <div id='div1'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga aliquid consequuntur porro mollitia harum commodi ipsam aliquam asperiores enim temporibus possimus magnam, vitae omnis nulla labore eum. Eaque, ex?
+      </div>
+      <div id='div2'>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio placeat fugit recusandae eligendi dolorum, impedit dolores facilis asperiores non nobis vitae reiciendis? Saepe laborum accusantium eum sunt natus molestias voluptatem.
+      </div>
+      <div id='div3'>
+         cumque quod reiciendis, odio, vero architecto? Vitae ex ratione incidunt nemo magnam!
+      </div>
+      <div id='div4'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo libero temporibus cumque, nam, minus corrupti alias ipsa cupiditate, dolorum deserunt a et. Nesciunt dolorem laborum temporibus cum, mollitia ad quos?
+      </div>
+
+      <!--Presentation de l'equipe-->
+      <div class='row mt-5'>
+          <div class="col-sm">
+            <img class="img-thumbnail" src="{% static './immob/img/inter.jpg'%}" alt="" />
+          </div>
+          <div class="col-sm">
+            <span class="text-warning h4 center-text">L'Afrique Immobilier</span>
+            <span class="text-black h4 decore-text center-text">est une entreprise de reférence en Afrique de l'ouest</span>
+            <p>
+              Composer d'une équipe dynamique qui se met à la tâche pour satisfaire vos besoins en immobilier et d'autres services.
+              <a href='#'><span class="">Lire plus ...</span></a>
+            </p>
+            
+          </div>
+      </div>
+
+
+      <!--De nouveau bien poster-->
+
+      <section class='mt-5'>
+
+        <center><h1>Bien recemment posté</h1></center>
+        <div class="row">
+            <div class="col-sm">
+              <div class="card">
+              <a href=""><img class="img-fluid" src="{% static './immob/img/inter.jpg'%}" alt="" /></a>
+                <div class="article-details">
+                  <p>Appartement</p>
+                  <p>4 pièces</p>
+                  <p>à Treichville</p>
+                  <p>3 chambres</p>
+                </div>
+                <div class="bg-warning article-details paie">
+                  <span class="text-white">450 000 fr CFA</span><a href="" class='h5 page-details' style="float: right;">Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm">
+              <div class="card">
+                <a href="#"><img class="img-fluid" src="{% static './immob/img/inter.jpg'%}" alt="" /></a>
+                <div class="article-details">
+                  <p>Appartement</p>
+                  <p>4 pièces</p>
+                  <p>à Treichville</p>
+                  <p>3 chambres</p>
+                </div>
+                <div class="bg-warning article-details paie">
+                  <span class="text-white">450 000 fr CFA</span><a href="" class=" h5 page-details">Details</a>
+                </div>
+              </div>
+            </div>
+            
+            
+              <div class="col-sm">
+                <div class="card">
+                  <a href="#"><img class="img-fluid" src="{% static './immob/img/inter.jpg'%}" alt="" /></a>
+                  <div class="article-details">
+                    <p>Appartement</p>
+                    <p>4 pièces</p>
+                    <p>à Treichville</p>
+                    <p>3 chambres</p>
+                  </div>
+                  <div class="bg-warning article-details paie">
+                    <span class="text-white">450 000 fr CFA</span><a href="" class="h5 page-details">Details</a>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+      </section>
+      
+
+      <!--Les services-->
+
+      <section class='mt-5'>
+
+        <center><h1>Des conseillers de d qualités</h1></center>
+        <div class="row">
+            <div class="col-sm">
+              <img class="img-thumbnail" src="{% static './immob/img/inter.jpg'%}" alt="" />
+              <div>
+                <center></center>
+              </div>
+            </div>
+            <div class="col-sm">
+              <img class="img-thumbnail" src="{% static './immob/img/inter.jpg'%}" alt="" />
+            </div>
+            <div class="col-sm">
+              <img class="img-thumbnail" src="{% static './immob/img/inter.jpg'%}" alt="" />
+            </div>
+        </div>
+      </section>
+      
+    </div>
+
+    {% endblock content %}
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+   
+    {% block script %}
+        
+
+      $(document).ready(function(){
+
+        $('#div1').hide();
+        $('#div2').hide();
+        $('#div3').hide();
+        $('#div4').hide();
+
+          $('#btn1').focusin(function(){
+            $(this).css('background', 'white')
+            $(this).css('border', 'none')
+            $('#div1').show()
+            $('#div2').hide();
+            $('#div3').hide();
+            $('#div4').hide();
+          }).focusout(function(){
+            $(this).css('background', 'none')
+          })
+          $('#btn2').focusin(function(){
+            $(this).css('background', 'white')
+            $(this).css('border', 'none')
+            $('#div1').hide()
+            $('#div2').show();
+            $('#div3').hide();
+            $('#div4').hide();
+          }).focusout(function(){
+            $(this).css('background', 'none')
+          })
+          $('#btn3').focusin(function(){
+            $(this).css('background', 'white')
+            $(this).css('border', 'none')
+            $('#div1').hide()
+            $('#div2').hide();
+            $('#div3').show();
+            $('#div4').hide();
+          }).focusout(function(){
+            $(this).css('background', 'none')
+          })
+          $('#btn4').focusin(function(){
+            $(this).css('background', 'white')
+            $(this).css('border', 'none')
+            $('#div1').show()
+            $('#div2').hide();
+            $('#div3').hide();
+            $('#div4').show();
+          }).focusout(function(){
+            $(this).css('background', 'none')
+          })
+      });
+    {% endblock script %}
+ 
